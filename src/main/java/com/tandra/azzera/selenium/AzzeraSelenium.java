@@ -61,12 +61,11 @@ public class AzzeraSelenium {
         
         //upload csv
         //we want to import file. 
-        //String filePath = 
-        //System.getProperty("user.dir") + "/src/res/test.pdf
-        //driver.findElement(By.name("temp (5).csv")).sendKeys("C:\\Users\\TandraTech\\Downloads\\temp (5).csv");
+        String filePath = System.getProperty("user.dir") + "/src/res/test.pdf";
+        driver.findElement(By.name("temp (5).csv")).sendKeys("C:\\Users\\TandraTech\\Downloads\\temp (5).csv");
 
         //refresh the page
-        //driver.navigate().refresh();
+        driver.navigate().refresh();
     }
 }
 
