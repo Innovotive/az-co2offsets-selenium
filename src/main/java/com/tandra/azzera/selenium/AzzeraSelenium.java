@@ -7,6 +7,7 @@ package com.tandra.azzera.selenium;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,7 +22,7 @@ public class AzzeraSelenium {
 
     public static void main(String[] args) throws MalformedURLException {
  
-        String nodeURL="http://ec2-3-83-145-251.compute-1.amazonaws.com:4444";
+        String nodeURL="https://selenium.co2-offsets.com/wd/hub";
         
         DesiredCapabilities cap = new DesiredCapabilities();
         cap.setBrowserName("chrome");
@@ -57,7 +58,7 @@ public class AzzeraSelenium {
         driver.findElement(By.cssSelector(".navbar > .text-primary")).click();
         
         //Wait to load
-        //driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
         
         //upload csv
         //we want to import file. 
